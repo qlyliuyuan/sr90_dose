@@ -8,6 +8,7 @@ WorkingDirectory=/home/ubuntu/sr90_dose
 ExecStart=/home/ubuntu/sr90_dose/venv/bin/streamlit run sr90_app.py \
     --server.port 8501 \
     --server.address 127.0.0.1 \
+    --server.baseUrlPath /sr90 \
     --server.headless true \
     --browser.gatherUsageStats false
 Restart=always
