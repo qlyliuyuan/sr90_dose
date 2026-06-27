@@ -1,0 +1,17 @@
+[Unit]
+Description=Sr-90 Dose Calculator (Streamlit)
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/sr90_dose
+ExecStart=/home/ubuntu/sr90_dose/venv/bin/streamlit run sr90_app.py \
+    --server.port 8501 \
+    --server.address 127.0.0.1 \
+    --server.headless true \
+    --browser.gatherUsageStats false
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
