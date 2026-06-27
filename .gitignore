@@ -1,0 +1,5 @@
+sr90_venv/
+__pycache__/
+*.pyc
+*.pyo
+verify_sr90.py
